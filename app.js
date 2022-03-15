@@ -11,7 +11,7 @@ const { Schema } = mongoose;
 const oneBuy = new Schema({
   shop: String,
   date: String,
-  sum: String,
+  sum: Number,
 });
 
 const Buys = mongoose.model("buy", oneBuy);
