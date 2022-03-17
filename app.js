@@ -18,8 +18,3 @@ app.use("/", apiRoutes);
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
-
-
-
-
-

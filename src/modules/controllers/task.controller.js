@@ -8,7 +8,6 @@ module.exports.getAllTicket = (req, res) => {
 
 module.exports.createTicket = (req, res) => {
   const ticket = new Buys(req.body);
-  console.log(ticket);
   ticket.save().then((result) => {
     Buys.find().then((result) => {
       res.send({ data: result });
@@ -36,7 +35,6 @@ module.exports.changeTicket = (req, res) => {
 
 module.exports.deleteTicket = (req, res) => {
   const id = req.query._id;
-  console.log(id);
   if (id) {
     Buys.deleteOne({ _id: id }).then(() => {
       Buys.find().then((result) => {
