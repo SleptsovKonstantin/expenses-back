@@ -18,7 +18,6 @@ module.exports.createTicket = (req, res) => {
 module.exports.changeTicket = (req, res) => {
   const body = req.body;
   const { _id } = body;
-  console.log(body);
   if (
     body.hasOwnProperty("_id") &&
     (body.hasOwnProperty("shop") || body.hasOwnProperty("date") || body.hasOwnProperty("sum"))
